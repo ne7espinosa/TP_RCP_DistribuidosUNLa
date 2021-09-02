@@ -1,0 +1,12 @@
+click==8.0.1
+Flask==2.0.1
+googleapis-common-protos==1.53.0
+grpcio==1.39.0
+grpcio-tools==1.39.0
+itsdangerous==2.0.1
+Jinja2==3.0.1
+MarkupSafe==2.0.1
+protobuf==3.17.3
+python-decouple==3.4
+six==1.16.0
+Werkzeug==2.0.1
