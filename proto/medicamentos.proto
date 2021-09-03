@@ -14,7 +14,7 @@ message TipoMedicamentoResponse {
 }
 
 message MedicamentoResponse {
-    repeated BookRecommendation recommendations = 1;
+    repeated MedicamentoResponse medicamento = 1;
 }
 
 message TipoMedicamentoResponse {
