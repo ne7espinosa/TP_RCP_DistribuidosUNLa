@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Table, Button, Container, Row, Col } from 'react-bootstrap';
+import { Table, Button, Container, Col } from 'react-bootstrap';
 
-function Tipomedicamento() {
+function TipoMedicamento() {
 
     const [tipomedicamentos, setTipomedicamentos] = useState([]);
 
@@ -24,17 +24,16 @@ function Tipomedicamento() {
                         setTipomedicamentos([...tipomedicamentos]);
                     }
                 })
-        }, 2000);
+        }, 1000);
 
 
     }, []);
 
-    console.log(tipomedicamentos);
     return (
         <Container>
             <Col>
                 <div className="d-flex p-3 justify-content-end">
-                    <Button className="float-right" variant="warning">Ver ahora</Button>
+                    <Button className="float-right" variant="warning">Crear</Button>
                 </div>
             </Col>
             <Col>
@@ -44,10 +43,8 @@ function Tipomedicamento() {
                         <thead>
                             <tr>
                                 <th>#Codigo</th>
-                                <th>Nombre Comercial</th>
-                                <th>Nombre Genérico</th>
-                                <th>Tipo Medicamento</th>
-                                <th>Acción</th>
+                                <th>Nombre</th>
+                                <th>Accion</th>
                             </tr>
                         </thead>
                         {
@@ -55,11 +52,9 @@ function Tipomedicamento() {
                                 return (
                                     <tbody key={tipomedicamento.id}>
                                         <tr>
-                                            <td>{tipomedicamento.codigo}</td>
-                                            <td>{tipomedicamento.nomComercial}</td>
-                                            <td>{tipomedicamento.nomDroga}</td>
-                                            <td>{tipomedicamento.medicamento[0].nombre}</td>
-                                            <td><Button variant="danger">Eliminar ahora</Button></td>
+                                            <td>{tipomedicamento.id}</td>
+                                            <td>{tipomedicamento.nombre}</td>
+                                            <td><Button variant="danger">Eliminar</Button></td>
                                         </tr>
                                     </tbody>
                                 )
@@ -72,4 +67,4 @@ function Tipomedicamento() {
     )
 }
 
-export default Tipomedicamento
+export default TipoMedicamento
