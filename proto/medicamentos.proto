@@ -1,16 +1,16 @@
 syntax = "proto3";
 
+message TipoMedicamentoResponse {
+    int32 id = 1;
+    string nombre = 2;
+}
+
 message MedicamentoRequest {
     int32 idMedicamento = 1;
     string nombreComercial = 2;
     string codigo = 3;
     string nombreDroga = 4;
     TipoMedicamentoResponse tipoMedicamento = 2;
-}
-
-message TipoMedicamentoResponse {
-    int32 id = 1;
-    string nombre = 2;
 }
 
 message MedicamentoResponse {
@@ -22,6 +22,22 @@ message TipoMedicamentoResponse {
     string nombre = 2;
 }
 
-service Medicamentos {
+service listarMedicamento {
+    rpc Medicamento (MedicamentoRequest) returns (MedicamentoResponse);
+}
+
+service darAltaTipoMedicamento {
+    rpc Medicamento (MedicamentoRequest) returns (MedicamentoResponse);
+}
+
+service darBajaTipoMedicamento {
+    rpc Medicamento (MedicamentoRequest) returns (MedicamentoResponse);
+}
+
+service listarMedicamentoPorTipo {
+    rpc Medicamento (MedicamentoRequest) returns (MedicamentoResponse);
+}
+
+service listarMedicamentoPorInicial {
     rpc Medicamento (MedicamentoRequest) returns (MedicamentoResponse);
 }

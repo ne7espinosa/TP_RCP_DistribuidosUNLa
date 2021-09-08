@@ -19,10 +19,10 @@ def before_request():
 
 @app.route('/')
 def index():
-    return redirect(url_for('basic'))
+    return redirect(url_for('home'))
 
 
 @app.route('/home')
-def basic():
+def home():
     return "Hello world"
 
