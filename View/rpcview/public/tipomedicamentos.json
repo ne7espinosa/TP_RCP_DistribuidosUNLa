@@ -3,75 +3,19 @@
         "datos": [
             {
                 "id": "1",
-                "nomComercial": "Ibupirac 400",
-                "codigo": "11111",
-                "nomDroga": "IBUPROFENO 400 mg",
-                "medicamento": [
-                    {
-                        "id": "1",
-                        "nombre": "Tableta"
-                    }
-                ]
+                "nombre": "Tableta"
             },
             {
                 "id": "2",
-                "nomComercial": "Amoxidal Dúo Roemmers",
-                "codigo": "11112",
-                "nomDroga": "AMOXIDAL DÚO 750 mg / 5 ml",
-                "medicamento": [
-                    {
-                        "id": "2",
-                        "nombre": "Liquido Oral"
-                    }
-                ]
+                "nombre": "Liquido Oral"
             },
             {
                 "id": "3",
-                "nomComercial": "Bayaspirina C Caliente",
-                "codigo": "11113",
-                "nomDroga": "Aspirina 500 mg, Ácido Ascórbico 200 mg",
-                "medicamento": [
-                    {
-                        "id": "3",
-                        "nombre": "Sobre en Polvo"
-                    }
-                ]
+                "nombre": "Sobre en Polvo"
             },
             {
                 "id": "4",
-                "nomComercial": "Buscapina",
-                "codigo": "11114",
-                "nomDroga": "Butilbromuro de Hioscina (HBB) 10 mg + Acetaminofen (Paracetamol) 500 mg",
-                "medicamento": [
-                    {
-                        "id": "1",
-                        "nombre": "Tableta"
-                    }
-                ]
-            },
-            {
-                "id": "5",
-                "nomComercial": "Té Vick - Vitapirena Forte",
-                "codigo": "11115",
-                "nomDroga": "Paracetamol, Fenilefrina",
-                "medicamento": [
-                    {
-                        "id": "3",
-                        "nombre": "Sobre en Polvo"
-                    }
-                ]
-            },
-            {
-                "id": "6",
-                "nomComercial": "Ciriax Otic",
-                "codigo": "11116",
-                "nomDroga": "Ciprofloxacino 0,2%, Hidrocortisona 1%",
-                "medicamento": [
-                    {
-                        "id": "4",
-                        "nombre": "En Gotas"
-                    }
-                ]
+                "nombre": "En Gotas"
             }
         ]
     }
