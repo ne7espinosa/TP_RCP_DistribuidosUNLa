@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Table, Button, Container, Col, Modal} from 'react-bootstrap';
+import { Table, Button, Container, Col, Modal, InputGroup, FormControl, Row } from 'react-bootstrap';
 import FormCrearMedicamento from './FormCrearMedicamento';
 
 function Medicamento() {
@@ -8,13 +8,6 @@ function Medicamento() {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
-
-    const onLoginFormSubmit = (e) => {
-        e.preventDefault();
-        console.log(e);
-        handleClose();
-      };
 
     useEffect(() => {
         setTimeout(function () {
@@ -44,14 +37,19 @@ function Medicamento() {
         <>
             <Container>
                 <Col>
-                    <div className="d-flex p-3 justify-content-end">
-                        <Button onClick={handleShow} className="float-right" variant="warning">Crear</Button>
+                    <div className="d-flex p-5 justify-content-center">
+                        <InputGroup className="mb-3">
+                            <Button variant="success" id="button-addon1">
+                                Buscar
+                            </Button>
+                            <FormControl
+                                aria-label="Example text with button addon"
+                                aria-describedby="basic-addon1"
+                            />
+                        </InputGroup>
+                        <Button onClick={handleShow} className="mb-3 float-left" style={{ marginLeft: '100px' }} variant="warning">Crear</Button>
                     </div>
-                </Col>
-                <Col>
-                    <div className="d-flex p-3 justify-content-center">
-
-                        <Table responsive="sm" striped bordered hover variant="dark" size="sm">
+                    <Table responsive="sm" striped bordered hover variant="dark" size="sm">
                             <thead>
                                 <tr>
                                     <th>#Codigo</th>
@@ -75,7 +73,6 @@ function Medicamento() {
                                 })
                             }
                         </Table>
-                    </div>
                 </Col>
             </Container>
             <Modal show={show} onHide={handleClose} animation={false}>
@@ -83,10 +80,8 @@ function Medicamento() {
                     <Modal.Title>Crear Medicamento</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <FormCrearMedicamento onSubmit={onLoginFormSubmit} />
+                    <FormCrearMedicamento />
                 </Modal.Body>
-                <Modal.Footer>
-                </Modal.Footer>
             </Modal>
         </>
     )
